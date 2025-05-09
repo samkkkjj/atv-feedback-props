@@ -1,9 +1,7 @@
 import iconStar from "../assets/icon-star.svg"
 
 export function Card1({nota, setNota, setSubmited}) {
-    function handleTrocarNota(nota) {
-        setNota(nota)
-}
+
 
     function handleSubmit() {
     if (nota !== 0) {
@@ -25,11 +23,11 @@ return(
     <p className="text-sm text-light-grey mb-6">Conte-nos como foi nossa ajuda com sua solicitação. Agradecemos muito seu feedback para podermos melhorar nosso atendimento!</p>
 
     <div className="flex justify-between mb-6">
-        <InputButton valor={1} handleTrocarNota={handleTrocarNota}/>
-        <InputButton valor={2} handleTrocarNota={handleTrocarNota}/>    
-        <InputButton valor={3} handleTrocarNota={handleTrocarNota}/>
-        <InputButton valor={4} handleTrocarNota={handleTrocarNota}/>
-        <InputButton valor={5} handleTrocarNota={handleTrocarNota}/>
+        <InputButton valor={1} setNota={setNota} />
+        <InputButton valor={2} setNota={setNota} />    
+        <InputButton valor={3} setNota={setNota} />
+        <InputButton valor={4} setNota={setNota} />
+        <InputButton valor={5} setNota={setNota} />
     </div>
     <button onClick={handleSubmit} className="bg-orange w-full py-3 rounded-3xl uppercase text-sm tracking-1 font-bold hover:bg-white hover:text-orange cursor-pointer">Enviar</button>
     </div>
